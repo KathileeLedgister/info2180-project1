@@ -1,11 +1,243 @@
 /* Add your CSS to this file */
 body {
     margin: 0;
-    font-size: 16px;
+    /*font-size: 16px;*/
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    font-size: 18px;
 }
 
 .container {
     margin: 0 auto;
     max-width: 960px;
     width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0,1fr));
+}
+
+/*.default-font{
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "NotoSans", sans-serif;
+    font-size: 18px;
+}*/
+
+header{
+    background-color: white;
+    font-size: 18px;
+    /*grid-column: 3 / 13;*/
+    /*grid-row: 1;*/
+}
+
+h1{
+    grid-column: 2 / 6;
+    grid-row: 1;
+    font-size: 18px;
+}
+
+nav {
+    /*display: grid;*/
+    grid-column: 8/13 ;
+    grid-row: 1;
+    color:#6b7280;
+    font-weight: bold;
+}
+
+nav ul{
+
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    /*  display: grid;*/
+}
+
+nav a:link{
+    color: #6b7280;
+    text-decoration: none;
+
+}
+
+nav a:visited{
+    color: #6b7280;
+}
+
+nav a:hover{
+   color:  #5A67D8;
+}
+
+.overview-hero{
+        background-color:#E2E8F0;
+}
+
+.overview-hero-text{
+    grid-column: 5/13 ;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.overview-hero-text h2{
+    padding-top:20px;
+}
+.overview-hero-text p{
+/*     align-self: center; */
+margin-top: 0;
+
+}
+
+
+.overview-hero-image {
+    grid-column: 2/4;
+    grid-row: 1;
+    display: flex;
+}
+
+.overview-hero-image img{
+        height: 70%;
+        align-self: center;
+}
+
+.learn-about h2{
+    grid-column:  3/ 7;
+    grid-row: 1;
+    font-size: 24px;
+    color:#48BB78;
+}
+
+
+
+.cards{
+    grid-column: 2 / 13;
+    grid-row: 2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card{
+    /*border-color:#E2E8F0;*/
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px 1px #D3D3D3;
+    max-width: 30%;
+    border-width: 10px;
+    border: 1px solid  #D3D3D3;
+    padding: 10px;
+}
+
+.card img{
+    max-width: 100%;
+    height: 40%;
+}
+
+.card h3{
+    color:#48BB78;
+    font-size:21px;
+}
+
+.testing{
+    background-color:#4A5568;
+    color: white;
+    margin-top:20px;
+    padding: 90px;
+}
+
+.testing-desciption{
+
+    grid-column: 1 / 9;
+    grid-row: 1;
+}
+
+/*.testing-desciption　{
+
+    grid-column: 2 / 13;
+
+
+}*/
+
+.cta{
+    grid-column:  10/ 13;
+    grid-row: 1;
+    display: flex;
+}
+
+.btn{
+   background-color: #48BB78;
+   border-radius: 5px;
+   padding: 10px;
+   padding-left: 25px;
+      padding-right: 25px;
+   color: white;
+   align-self: center;
+}
+
+/*a.stories{
+    color: #5A67D8;
+}*/
+
+.stories h2{
+    color: #5A67D8;
+    font-size:18px;
+    grid-column:  1/ 6;
+    grid-row: 1;
+}
+
+article{
+    grid-column: 1/13;
+    display: flex;
+    margin: 25px;
+}
+
+.article-body{
+    padding-left:20px;
+}
+
+.stories a:link{
+    color: #5A67D8;
+    text-decoration: none;
+
+}
+
+.stories a:visited{
+    color: #5A67D8;
+}
+
+.stories img{
+    border-radius: 50%;
+     width: 20%;
+     padding: 10px;
+}
+
+.newsletter{
+   background-color: #48BB78;
+   color: white;
+   padding-bottom: 50px;
+}
+
+.newsletter h3,
+.newsletter p,
+.newsletter form{
+    grid-column: 5/11;
+    align-self: center;
+}
+
+.newsletter form{
+    display: flex;
+        align-self: center;
+}
+
+form .btn{
+   background-color: #5A67D8;
+    border-width: 0;
+}
+
+#email{
+    height:30px;
+    margin-right: 10px;
+     border-radius: 4px;
+     border-width: 0;
+}
+
+footer {
+   background-color: #4A5568;
+   color: white;
+}
+
+footer p{
+    grid-column: 1/13;
 }
