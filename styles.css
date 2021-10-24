@@ -184,7 +184,7 @@ margin-top: 0;
 
 .stories h2{
     color: #5A67D8;
-/*     font-size:18px; */
+    margin:30px;
     grid-column:  1/ 6;
     grid-row: 1;
 }
@@ -229,19 +229,22 @@ article{
 .newsletter h3,
 .newsletter p,
 .newsletter form{
-    grid-column: 3/11;
-    align-self: center;
+    grid-column: 4/10;
 }
 
 .newsletter h3{
     margin: 0;
-    grid-column: 5/11;
+    text-align: center;
+}
 
+.newsletter p{
+    text-align: center;
 }
 
 .newsletter form{
     display: flex;
-        align-self: center;
+    align-items: center;
+    justify-content:center;
 }
 
 form .btn{
